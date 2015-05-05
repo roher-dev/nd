@@ -1,0 +1,650 @@
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent; }
+ 
+ /* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll; }
+
+#nav {
+	/*display:none !important;*/
+	text-align: center !important;	
+	
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none; }
+   
+.subtitle {
+	clear:left;
+	font-family: arial;
+	/*font-family: "brandon-grotesque-1", "brandon-grotesque-2", sans-serif;*/
+	font-size:0.65em;
+	line-height: normal !important;
+}
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+td {
+  font-weight: normal;
+  vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+td, td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible; }
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+.chromeframe {
+  position: absolute;
+  top: 0; }
+
+* {
+  outline: 0; }
+  
+  .element-invisible {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/* IE7 \*/
+\*:first-child + html .element-invisible {
+  clip: rect(0 0 0 0); }
+
+/* IE6 \*/
+\* html .element-invisible {
+  clip: rect(0 0 0 0); }
+
+.cf:before,
+.cf:after {
+  content: "";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+  
+.header-home .header-social,
+	.header-home .contact-box {
+		float: right;
+	}
+
+	.header-home .contact-box {
+		clear: right;
+	}
+
+	.home-search-box {
+		margin: 2% 10% 1%;
+		padding: 1%; /*2%;*/
+		text-align: center;		
+	}
+
+	.home-search-box h2 {
+		font-size: 2em; /* estaba en 1em pero ie no andaba */
+		margin-bottom: 18px; /*1em;*/
+		color: #666;
+		text-shadow: 0 1px 0 #FFF;
+	}
+
+		.home-search-box .search-box {
+			width: 80%;
+			display: inline-block;
+		}
+
+			.search-box {
+				position: relative;
+			}
+
+			.search-box input {
+				width: 90%;
+			}
+
+			.autocomplete {
+				position: absolute;				
+				top: 35px;
+				left: 0;
+				right: 0;
+				font-size: 0.75em;
+				text-align: left;
+				line-height: 1.65em;
+				background: #FFF;
+				box-shadow: 0 1px 5px #444;
+			}
+
+				.autocomplete a {
+					display: block;
+					border: 1px solid #FFF;
+					padding: 0 10px;
+				}
+
+				.autocomplete a:hover {
+					/*color: #FF7300;*/
+					border: 1px solid #CCC;
+					border-top-color: #DDD;
+					border-bottom-color: #AAA;
+					background: #EEE;
+					background: -webkit-linear-gradient(#EEE, #DDD);
+					background: -moz-linear-gradient(#EEE, #DDD);
+					background: linear-gradient(#EEE, #DDD);					
+				}				
+
+					.autocomplete em {
+						color: #F93;
+						/*background: #FF3;*/
+					}
+
+					.autocomplete-subtitle {
+						padding-left: 10px;						
+						color: #AAA;
+					}
+
+					.autocomplete-last-item {
+						margin-top: 5px;						
+						border-top: 1px dashed #AAA;
+						font-weight: bold;
+						font-size: 1.2em;
+						line-height: 1.9em;
+						text-align: center;
+					}
+					
+					.autocomplete-last-item a {
+						color: #F93;
+					}
+
+	
+.home-nav, .social {
+	text-align: center;	
+    /*width: 80%;*/
+    /*margin: 0px auto;*/
+    margin: 0% 10% 0% 10%;
+}
+
+	.home-nav li, .social li {
+		display: inline-block;
+		margin: 1% 1%;
+	}
+
+	.home-nav a {
+		width: 110px;	/*estaba en 50px ?! firefox sobreescribe a 110 ie no*/	
+		display: block;
+		padding: 5%;
+		background: -webkit-linear-gradient(#FFF 90%, #EEE 100%);
+		background:    -moz-linear-gradient(#FFF 90%, #EEE 100%);
+		background:         linear-gradient(#FFF 90%, #EEE 100%);
+		font-size: 1em;
+		font-weight: bold;		
+		border-radius: 10px;
+		border: 3px solid #FFF;		
+        border: 3px solid #CCC\9;   /* IE6, IE7, IE8, IE9 */
+		word-wrap: break-word;
+		box-shadow:0 2px 2px #666,
+			       0 0 3px #CCC;
+        /* For IE 8 */
+        /*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#666666')";*/
+        /* For IE 5.5 - 7 */
+        /*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#666666');*/
+	}
+
+		.home-nav a:hover {
+			border: 3px solid #F93;
+			text-decoration: none;
+		}
+
+	.home-nav img {
+		/*max-width: 100%;*/
+		width: 110px;
+		height: 110px;
+		margin: 0 auto 1em;
+		display: block;
+	}
+
+.contact-box {
+		width: 200px;
+		float: right;
+		font-size: 0.75em;
+		line-height: 1.6em;
+		/*margin-top: 5px;*/
+		padding-top: 1%;
+	}
+
+		.contact-box p {
+			float:left;
+			margin: 5px 8px 0 0;
+		}
+
+		.contact-box .contact-box-cities {
+			margin-right: 0;
+		}
+
+		.contact-box-number strong {
+			font-size: 1.9em;
+			font-weight: bold;
+			line-height: 20px;
+		}
+
+		.contact-box-number small {
+			display: block;
+			position: relative;
+			top: -3px;
+		}
+
+.tag {
+	display: inline-block;
+	padding: 0 .2em;
+	background: green;
+	color: #FFF;
+	font-size: 10px;
+	text-transform: uppercase;
+	border-radius: 3px;
+}		
+
+@media only screen and (min-width : 420px) {
+
+		.home-search-box h2	{
+			font-size: 2em;
+		}
+
+	.home-nav a {
+		width: 110px; /*200*/
+		/*font-size: 0.9em;*/
+	}
+}
+
+
+@media only screen and (min-width : 1224px) {
+
+	.home-nav a {
+			width: 110px; /*200*/
+			font-size: 0.9em;
+	}
+
+	.home-search-box {
+		margin: 2% 10% 1%;
+	}
+					.autocomplete-subtitle {
+						position: absolute;
+						right: 2%;
+						border-top: 1px dashed #AAA;
+						color: #AAA;
+					}	
+}
+
+.subtitle-alt
+{
+    float: left;
+    clear: left;
+    font-size:  10px;
+    font-family: arial;
+}
+.fb-like {
+    vertical-align:top;
+}
+
+.copyright {
+  float: right;
+  text-align: right;
+  font-size: 11px;
+}
+
+.main {
+  width: 100%;
+  background-color: #f0f0f0;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  display: block; }
+
+.mainInner {
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative; }
+
+.mainOpen {
+  margin-left: -10em; 
+}
+  @media screen and (min-width: 46em) {
+    .mainOpen {
+      margin-left: 0;
+      width: 80%;
+      float: left; } }
+  @media screen and (min-width: 77em) {
+    .mainOpen {
+      width: 84%; } }
+
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 0; }
+
+
+.contentMaxWidth {
+  max-width: 77em;
+  margin: 0 auto; }
+
+.contentMaxWidthEntry {
+  max-width: 46em;
+  margin: 0 auto; }
+
+
+body, select, input, textarea {
+  color: #333333;
+  line-height: normal; 
+}
+
+a {
+  color: #03f; }
+
+a:hover {
+  color: #69f; }
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none; }
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #fcd700; }
+
+ins {
+  background-color: #fcd700;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #fcd700;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/* IE7 \*/
+\*:first-child + html .element-invisible {
+  clip: rect(0 0 0 0); }
+
+/* IE6 \*/
+\* html .element-invisible {
+  clip: rect(0 0 0 0); }
+
+.cf:before,
+.cf:after {
+  content: "";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+.pad {
+  padding: 1.5em; }
+  @media screen and (min-width: 36em) {
+    .pad {
+      padding: 2em; } }  
+
+#menuButton {
+  position: fixed;
+  width: 1.6em;
+  height: 1.6em;
+  top: 0.9em;
+  right: 0.9em;
+  z-index: 3; 
+  background:none;
+  border:0px;  
+}
+
+.me {
+  border-radius: 50%;
+  max-width: 7em; }
+
+#hamburger {
+  position: absolute;
+  top: -20%;
+  left: 20%;
+  z-index: 3;
+  fill: #d1d1d1;
+  width: 1.4em;
+  height: 1.7em;
+  transition: all 0.3s ease; }
+
+#menuButton:hover #hamburger,
+#menuButton:focus #hamburger,
+#menuButton:active #hamburger {
+  fill: #5aa6ce; }
+#menuButton:hover #top,
+#menuButton:focus #top,
+#menuButton:active #top {
+  transition: all 0.8s ease; }
+#menuButton:hover #middle,
+#menuButton:focus #middle,
+#menuButton:active #middle {
+  transition: all 0.5s ease; 
+ 	border:0px; 
+ }
+#menuButton:hover #bottom,
+#menuButton:focus #bottom,
+#menuButton:active #bottom {
+  transition: all 0.2s ease; 
+  border:0px;
+  }
+
+.buttonClicked #top {
+  -webkit-transform: translate(50px, 50px) rotate(45deg);
+  -moz-transform: translate(50px, 50px) rotate(45deg);
+  -ms-transform: translate(50px, 50px) rotate(45deg);
+  -o-transform: translate(50px, 50px) rotate(45deg);
+  transform: translate(50px, 50px) rotate(45deg); }
+.buttonClicked #middle {
+  transform: translate(-1200px, 0);
+  -webkit-transform: translate(-1200px, 0);
+  -moz-transform: translate(-1200px, 0);
+  -ms-transform: translate(-1200px, 0);
+  -o-transform: translate(-1200px, 0); }
+.buttonClicked #bottom {
+  -webkit-transform: translate(-270px, 95px) rotate(-45deg);
+  -moz-transform: translate(-270px, 95px) rotate(-45deg);
+  -ms-transform: translate(-270px, 95px) rotate(-45deg);
+  -o-transform: translate(-270px, 95px) rotate(-45deg);
+  transform: translate(-270px, 95px) rotate(-45deg); }
+
+nav {
+  /*text-align: right !important;*/
+  display: block !important;
+  margin-top: 2.3em !important;
+  /*text-align: center !important;*/
+  clear:right;
+  position:absolute;
+  left:85%;
+}
+  nav a, nav a:visited {
+    color: #9e9e9e !important;
+    text-decoration: none !important;
+    line-height: 1.6em !important;
+    font-size: 1.2em !important;
+    padding: 0.2em 0 !important;
+    display: block !important; 
+}
+  nav a:hover,
+  nav a:focus,
+  nav a:active {
+    color: #5aa6ce !important;}
+    
+    .buttonNoStyle {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  outline: 0;
+  transition: all 0.3s ease;
+  font-weight: 400; }
+
+.cornerTriangle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5em 5em 0;
+  border-color: transparent #1AA013 transparent transparent;
+  transition: all 0.3s ease; 
+  }
+
+.cornerTriangleWorkTile {
+  position: absolute; }
+  

@@ -1,0 +1,405 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+select {
+	font: inherit;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/**
+ * Mini input reset @mmazza
+ */
+input {
+	margin: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/**
+ * Autociudad styles
+ */
+
+/*
+html {
+	background: -webkit-linear-gradient(#EEE 2%, #FFF 10%);
+	background: -moz-linear-gradient(#EEE 2%, #FFF 10%);
+	background: linear-gradient(#EEE 2%, #FFF 10%);
+}*/
+
+body {
+	font-family: sans-serif;
+}
+
+a {
+	color: #004ba2;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F93;
+	text-decoration: underline;
+}
+
+input, .input-wrap {
+	padding: 8px 10px;
+	font-size: 18px;
+	border: 1px solid #CCC;
+	background: #FFF;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px #666 inset;
+}
+
+.input-wrap {
+	position: relative;
+}
+
+	.input-wrap input {
+		width: 100%;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+		.input-wrap .btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: .5em 1.2em;
+			border-radius: 0 5px 5px 0;
+		}
+
+		.lt-ie9 .input-wrap .btn {
+			padding: .6em 1.2em;
+		}	
+
+.gradient-box {
+	background: #EEE;
+	background: -webkit-linear-gradient(#EEE, #CCC);
+	background: -moz-linear-gradient(#EEE, #CCC);
+	background:  linear-gradient(#EEE, #CCC);
+	box-shadow:
+		0 1px 3px #666,
+		0 0px 3px #CCC,
+		0 1px 1px #FFF inset;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#666666')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#666666');	
+}
+
+.rounded-box {
+	border-radius: 10px;
+}
+
+.header-home {
+	margin: 2% 10% 1%;
+	overflow: hidden;
+}
+
+.home-logo {
+	margin-top: 1%;
+	text-align: center;
+	float: left;
+}
+
+.home-logo img 
+{
+    width:100%;
+}
+
+	.header-home .header-social,
+	.header-home .contact-box {
+		float: right;
+	}
+
+	.header-home .contact-box {
+		clear: right;
+	}
+
+	.home-search-box {
+		margin: 2% 10% 1%;
+		padding: 1%; /*2%;*/
+		text-align: center;		
+	}
+
+	.home-search-box h2 {
+		font-size: 2em; /* estaba en 1em pero ie no andaba */
+		margin-bottom: 18px; /*1em;*/
+		color: #666;
+		text-shadow: 0 1px 0 #FFF;
+	}
+
+		.home-search-box .search-box {
+			width: 80%;
+			display: inline-block;
+		}
+
+			.search-box {
+				position: relative;
+			}
+
+			.search-box input {
+				width: 90%;
+			}
+
+			.autocomplete {
+				position: absolute;				
+				top: 35px;
+				left: 0;
+				right: 0;
+				font-size: 0.75em;
+				text-align: left;
+				line-height: 1.65em;
+				background: #FFF;
+				box-shadow: 0 1px 5px #444;
+			}
+
+				.autocomplete a {
+					display: block;
+					border: 1px solid #FFF;
+					padding: 0 10px;
+				}
+
+				.autocomplete a:hover {
+					/*color: #FF7300;*/
+					border: 1px solid #CCC;
+					border-top-color: #DDD;
+					border-bottom-color: #AAA;
+					background: #EEE;
+					background: -webkit-linear-gradient(#EEE, #DDD);
+					background: -moz-linear-gradient(#EEE, #DDD);
+					background: linear-gradient(#EEE, #DDD);					
+				}				
+
+					.autocomplete em {
+						color: #F93;
+						/*background: #FF3;*/
+					}
+
+					.autocomplete-subtitle {
+						padding-left: 10px;						
+						color: #AAA;
+					}
+
+					.autocomplete-last-item {
+						margin-top: 5px;						
+						border-top: 1px dashed #AAA;
+						font-weight: bold;
+						font-size: 1.2em;
+						line-height: 1.9em;
+						text-align: center;
+					}
+					
+					.autocomplete-last-item a {
+						color: #F93;
+					}
+
+	
+.home-nav, .social {
+	text-align: center;	
+    /*width: 80%;*/
+    /*margin: 0px auto;*/
+    margin: 0% 10% 0% 10%;
+}
+
+	.home-nav li, .social li {
+		display: inline-block;
+		margin: 1% 1%;
+	}
+
+	.home-nav a {
+		width: 110px;	/*estaba en 50px ?! firefox sobreescribe a 110 ie no*/	
+		display: block;
+		padding: 5%;
+		background: -webkit-linear-gradient(#FFF 90%, #EEE 100%);
+		background:    -moz-linear-gradient(#FFF 90%, #EEE 100%);
+		background:         linear-gradient(#FFF 90%, #EEE 100%);
+		font-size: 1em;
+		font-weight: bold;		
+		border-radius: 10px;
+		border: 3px solid #FFF;		
+        border: 3px solid #CCC\9;   /* IE6, IE7, IE8, IE9 */
+		word-wrap: break-word;
+		box-shadow:0 2px 2px #666,
+			       0 0 3px #CCC;
+        /* For IE 8 */
+        /*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#666666')";*/
+        /* For IE 5.5 - 7 */
+        /*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#666666');*/
+	}
+
+		.home-nav a:hover {
+			border: 3px solid #F93;
+			text-decoration: none;
+		}
+
+	.home-nav img {
+		/*max-width: 100%;*/
+		width: 110px;
+		height: 110px;
+		margin: 0 auto 1em;
+		display: block;
+	}
+
+.contact-box {
+		width: 200px;
+		float: left;
+		font-size: 0.75em;
+		line-height: 1.6em;
+		margin-top: 5px;
+	}
+
+		.contact-box p {
+			float:left;
+			margin: 5px 8px 0 0;
+		}
+
+		.contact-box .contact-box-cities {
+			margin-right: 0;
+		}
+
+		.contact-box-number strong {
+			font-size: 1.9em;
+			font-weight: bold;
+			line-height: 20px;
+		}
+
+		.contact-box-number small {
+			display: block;
+			position: relative;
+			top: -3px;
+		}
+
+.tag {
+	display: inline-block;
+	padding: 0 .2em;
+	background: green;
+	color: #FFF;
+	font-size: 10px;
+	text-transform: uppercase;
+	border-radius: 3px;
+}		
+
+@media only screen and (min-width : 420px) {
+
+		.home-search-box h2	{
+			font-size: 2em;
+		}
+
+	.home-nav a {
+		width: 110px; /*200*/
+		/*font-size: 0.9em;*/
+	}
+}
+
+
+@media only screen and (min-width : 1224px) {
+
+	.home-nav a {
+			width: 110px; /*200*/
+			font-size: 0.9em;
+	}
+
+	.home-search-box {
+		margin: 2% 10% 1%;
+	}
+					.autocomplete-subtitle {
+						position: absolute;
+						right: 2%;
+						border-top: 1px dashed #AAA;
+						color: #AAA;
+					}	
+}
+
+.subtitle
+{
+    float: left;
+    clear: left;
+    font-size:  10px;
+    font-family: arial;
+}
+.fb-like {
+    vertical-align:top;
+}
+
+.copyright {
+  float: right;
+  text-align: right;
+  font-size: 11px;
+}
